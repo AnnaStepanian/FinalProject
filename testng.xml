@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+    <test name="Valid search test">
+        <parameter name="browser" value="chrome">
+            <classes>
+                <class name="AssortmentPageSearchTest">
+                    <methods>
+                        <include name="ValidSearchTest"/>
+                    </methods>
+                </class>
+            </classes>
+        </parameter>
+    </test>
+    <test name="Agents selection test">
+        <parameter name="browser" value="chrome">
+            <classes>
+                <class name="AgentsPageTest">
+                    <methods>
+                        <include name="AgentsSelectionTest"/>
+                    </methods>
+                </class>
+            </classes>
+        </parameter>
+    </test>
+    <test name="Agents selection contact form">
+        <parameter name="browser" value="chrome">
+            <classes>
+                <class name="AgentsPageTest">
+                    <methods>
+                        <include name="FormValidation"/>
+                    </methods>
+                </class>
+            </classes>
+        </parameter>
+    </test>
+    <test name="Assortment Page Filter">
+        <parameter name="browser" value="chrome">
+            <classes>
+                <class name="AssortmentPageFilterTest">
+                    <methods>
+                        <include name="AssortmentFilterTest"/>
+                    </methods>
+                </class>
+            </classes>
+        </parameter>
+    </test>
+</suite>
